@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh - Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                Yogesh
+            </h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="tel:+919786373922">Contact</a></li>
+            </ul>
+            <button id="btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section>
+        <div class="s-container">
+            <div class="content">
+                <span class="subtitle">
+                    Hello
+                </span>
+                <h1 class="title">
+                    I'm <span>Yogesh <br></span>a Python Developer
+                </h1>
+                <p class="description"></p>
+                    Welcome to my  portfolio! I'm Yogesh, a dedicated and a passionate Python developer dedicated to crafting efficient, scalable, and user-friendly applications. With a strong foundation in backend development, I thrive on solving complex problems and transforming ideas into functional code Explore my portfolio to see a selection of my projects that highlight my skills and creativity. Whether you’re looking for collaboration or just want to connect, I’d love to hear from you!
+                </p> 
+                <div class="buttons">
+                    <a href="mailto:yogeshw022@gmail.com">Hire Me</a>
+                    <button onclick=Showdialog(true)>Projects</button>
+                </div>
+            </div>
+            <div class="image"> 
+                <img src="my.jpg" alt="pfp">
+            </div>
+        </div>
+    </section>
+    <dialog id="pop-up">  
+        <div class="page">
+            <ol class="inside">
+                <li>Django<br> <a href="https://github.com/YOGESH0700/Django-Project">Curd Operation Using Django</a></li>
+                <li>Python <br> <a href="https://github.com/YOGESH0700/Hangman-Project-Python">Hang Man Project</a></li>
+                <li>AI Speech<br> <a href="https://github.com/YOGESH0700/text-to-speech-">AI Text To Speech</a></li>
+                <li>Password Generator<br> <a href="https://github.com/YOGESH0700/Intership_Projects/tree/main/password%20generator">Random Password Generator Using Python</a></li>
+                <li>Snake Game<br> <a href="https://github.com/YOGESH0700/Intership_Projects/tree/main/snake%20game">Snake Game Using Turtle Graphics Module</a></li>
+            </ol>
+            <button class="btn-dia" onclick=Showdialog(false) type="button">Back</button>
+            
+        </div> 
+       
+    </dialog>
+    
+    <script>
+        const popUp = document.getElementById("pop-up");
+const body = document.body; 
+
+const Showdialog = (show) => {
+    if (show) {
+        popUp.showModal();
+        body.classList.add("blur"); 
+    } else {
+        popUp.close();
+        body.classList.remove("blur");
+    }
+};
+
+popUp.addEventListener('click', (e) => !divWrap.contains(e.target) && Showdialog(false));
+
+const btn= document.getElementById("btn")
+    btn.addEventListener("click", () => {
+        document.querySelector("header ul").classList.toggle("show")
+    })
+    </script>
+</body>
+</html>
